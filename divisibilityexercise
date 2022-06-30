@@ -1,0 +1,15 @@
+def div_by_ytest(a,y):
+  sum_of_numbers = 0
+  list_ = [i for i in range (0,a,y)]
+  x = -1
+  list2_ = []
+  for number in list_:
+    x += 1
+    for digit in str(list_[x]):
+      sum_of_numbers += int(digit)
+    list2_.append(sum_of_numbers)
+    sum_of_numbers = 0
+    if list_[x] % y == 0 and list2_[x] % y != 0:
+      print("We found a number that is divisible by " + str(y) + " and the sum of its digits isn't. That number is: " + str(number))
+    else:
+      print("The number " + str(number) + " and the sum of its digits are both divisible by " + str(y))
